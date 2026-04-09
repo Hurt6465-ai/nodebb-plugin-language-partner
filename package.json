@@ -1,47 +1,24 @@
 {
-  "name": "nodebb-plugin-quickstart",
-  "version": "0.4.3",
-  "description": "A starter kit for quickly creating NodeBB plugins",
+  "name": "nodebb-plugin-language-partner",
+  "version": "0.1.0",
+  "description": "A HelloTalk-style language partner page for NodeBB",
   "main": "library.js",
+  "keywords": [
+    "nodebb-plugin",
+    "nodebb",
+    "language-partner",
+    "chat"
+  ],
+  "author": "OpenAI",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nodebb/nodebb-plugin-quickstart"
+    "url": "https://github.com/yourname/nodebb-plugin-language-partner"
   },
-  "scripts": {
-    "lint": "eslint ."
-  },
-  "keywords": [
-    "nodebb",
-    "plugin",
-    "quickstart",
-    "shell"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
-  },
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nodebb/nodebb-plugin-quickstart/issues"
+    "url": "https://github.com/yourname/nodebb-plugin-language-partner/issues"
   },
-  "readmeFilename": "README.md",
   "nbbpm": {
-    "compatibility": "^3.2.0"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "20.5.0",
-    "@commitlint/config-angular": "20.5.0",
-    "eslint": "10.2.0",
-    "eslint-config-nodebb": "2.0.1",
-    "husky": "9.1.7",
-    "lint-staged": "16.4.0"
+    "compatibility": "^4.10.1"
   }
 }
