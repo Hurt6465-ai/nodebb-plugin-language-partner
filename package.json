@@ -19,6 +19,6 @@
     "url": "https://github.com/yourname/nodebb-plugin-language-partner/issues"
   },
   "nbbpm": {
-    "compatibility": "^4.10.1"
+    "compatibility": "^4.9.0 || ^4.10.0"
   }
 }
