@@ -1,9 +1,6 @@
 'use strict';
 
-define('forum/language-partners', function () {
-  var module = {};
-
-  module.init = function () {
+(function () {
     var CONFIG = {
       maxDisplay: 50,
       activeLimit: 24 * 60 * 60 * 1000,
@@ -975,8 +972,23 @@ define('forum/language-partners', function () {
       setTimeout(startBackgroundLocationSync, 1200);
     }
 
+    function boot() {
+    if (!window.jQuery) return;
+    if (!$('#ht-user-list').length) return;
     initPage();
-  };
+  }
 
-  return module;
-});
+  if (window.jQuery) {
+    $(document).ready(boot);
+
+    $(window)
+      .off('action:ajaxify.end.htpartner')
+      .on('action:ajaxify.end.htpartner', function () {
+        if ($('#ht-user-list').length) {
+          boot();
+        }
+      });
+  } else {
+    document.addEventListener('DOMContentLoaded', boot);
+  }
+})();
